@@ -1,0 +1,11 @@
+{
+  "name": "Remix JARVIS AI - Holographic Personal Assistant",
+  "description": "An Iron Man-inspired futuristic holographic AI assistant with real Gemini intelligence, voice control, memory, tasks, search, and vision.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
