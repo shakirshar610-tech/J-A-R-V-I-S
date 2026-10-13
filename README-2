@@ -1,0 +1,198 @@
+# JARVIS — Personal AI Assistant
+
+A personal AI assistant project designed to provide a clean foundation for building helpful, secure, and extensible AI-powered experiences.
+
+> **Project status:** Initial project structure created. Feature availability depends on the current implementation in `src/` and `server.ts`.
+
+## Overview
+
+JARVIS is a personal AI assistant application. This repository contains the application structure, development configuration, and environment-variable template needed to develop and run the project.
+
+The goal is to evolve JARVIS into a maintainable assistant with a user-friendly interface, a reliable server layer, and integrations added deliberately as the project develops.
+
+## Highlights
+
+- **Modern web tooling** using Vite and TypeScript configuration.
+- **Server entry point** in `server.ts`.
+- **Environment configuration template** in `.env.example`.
+- **Firebase configuration file** for the relevant Firebase/App Hosting setup.
+- **Git-friendly project structure** with `.gitignore`.
+- **Extensible foundation** for adding and testing future assistant capabilities.
+
+*Only features implemented and tested in the source code should be described as available.*
+
+## Technology Stack
+
+The repository currently indicates the following technologies or tools:
+
+- **TypeScript** — typed application/server code.
+- **Vite** — development and build tooling.
+- **Bun** — lockfile present (`bun.lock`); use the package scripts and project setup to confirm the required runtime.
+- **Firebase** — Firebase-related configuration file present.
+
+Check `package.json` and the source files for the exact dependencies, scripts, and services used by the current version.
+
+## Repository Structure
+
+```text
+.
+├── src/                        # Application source code
+├── .env.example                # Example environment-variable template
+├── .gitignore                  # Files excluded from version control
+├── bun.lock                    # Bun dependency lockfile
+├── firebase-applet-config.json # Firebase-related configuration
+├── index.html                  # HTML entry point
+├── metadata.json               # Project/application metadata
+├── package.json                # Dependencies and project scripts
+├── server.ts                   # Server entry point
+├── tsconfig.json               # TypeScript configuration
+└── vite.config.ts              # Vite configuration
+```
+
+The exact contents of `src/` may change as the project develops.
+
+## Getting Started
+
+### Prerequisites
+
+Install the runtime and package manager required by this repository. Because `bun.lock` is present, Bun may be the intended package manager. Confirm the scripts and engine requirements in `package.json` before choosing a setup.
+
+- Git
+- Bun (if required by the project)
+- Any API keys or service credentials required by the features you enable
+
+### 1. Clone the repository
+
+Replace `YOUR-USERNAME` with your GitHub username and `YOUR-REPOSITORY` with the actual repository name.
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+cd YOUR-REPOSITORY
+```
+
+### 2. Install dependencies
+
+If the project uses Bun:
+
+```bash
+bun install
+```
+
+If `package.json` specifies a different package manager, follow the project’s configured workflow instead.
+
+### 3. Configure environment variables
+
+Create a local environment file from the template:
+
+```bash
+cp .env.example .env
+```
+
+On Windows Command Prompt, you can use:
+
+```bat
+copy .env.example .env
+```
+
+Open `.env.example` and review the variable names and comments. Add the required values to your local `.env` file. **Never commit real API keys, passwords, access tokens, or private credentials.**
+
+Do not assume that a variable is required—or invent a variable name—without checking the project configuration and source code.
+
+### 4. Run the development server
+
+Inspect the `scripts` section of `package.json` to find the actual available commands. If a `dev` script is defined, the command may be:
+
+```bash
+bun run dev
+```
+
+Use the exact command documented by the repository if it differs.
+
+### 5. Build and test
+
+Check `package.json` for the available build, type-check, lint, and test scripts. For example, if the corresponding scripts exist:
+
+```bash
+bun run build
+bun run test
+```
+
+These commands will only work if those scripts are defined. Add and maintain tests as features are implemented.
+
+## Configuration Notes
+
+- **`.env.example`** documents the environment variables expected by the application. Keep placeholder values there, not real secrets.
+- **`firebase-applet-config.json`** is a Firebase-related configuration file. Review its contents and the Firebase setup used by the project before deploying.
+- **`server.ts`** is the server entry point shown in the repository. Review its routes, middleware, and runtime requirements before exposing it publicly.
+- **`vite.config.ts`** and **`tsconfig.json`** define build and TypeScript settings.
+
+## Security
+
+Security should be part of every stage of JARVIS development.
+
+- Keep private keys, API tokens, passwords, and service-account credentials out of Git.
+- Use server-side environment variables for secrets; never expose private credentials in browser code.
+- Validate and sanitize untrusted input on the server.
+- Apply authentication and authorization wherever private user data or protected actions are involved.
+- Configure appropriate rate limits, error handling, and logging before public deployment.
+- Review Firebase security rules and restrict access according to the application's actual data model.
+- Do not rely on client-side checks as the only security control.
+- Test security-sensitive changes before release.
+
+These are project recommendations, not a claim that every control is already implemented.
+
+## Development Guidelines
+
+1. Keep changes focused and easy to review.
+2. Use clear names and consistent TypeScript conventions.
+3. Update documentation when setup instructions or features change.
+4. Add tests for important behavior and security-sensitive paths.
+5. Never commit local `.env` files or generated secrets.
+6. Verify build and runtime behavior before describing a feature as complete.
+
+## Roadmap
+
+Potential next steps for the project:
+
+- [ ] Document the current features implemented in `src/`.
+- [ ] Confirm and document the exact setup and run commands.
+- [ ] Add automated tests and a repeatable build check.
+- [ ] Review authentication and user-session requirements, if applicable.
+- [ ] Add assistant capabilities incrementally and document their requirements.
+- [ ] Review Firebase access rules and deployment configuration, if Firebase services are used.
+- [ ] Add screenshots or a demo link once a working interface is available.
+- [ ] Document deployment steps and supported environments.
+
+The roadmap is a planning checklist, not a statement that these features currently exist.
+
+## Contributing
+
+Contributions and suggestions are welcome.
+
+1. Create a fork of the repository.
+2. Create a focused branch for your change.
+3. Make your changes and test them locally.
+4. Update documentation when needed.
+5. Open a pull request describing the change and how it was tested.
+
+Please avoid including secrets, private user data, or unrelated changes in a contribution.
+
+## Troubleshooting
+
+- **Dependency installation fails:** Confirm the required Bun/Node version and package manager in `package.json`.
+- **The development command is not found:** Check the `scripts` section of `package.json` and run the script that is actually defined.
+- **Missing configuration:** Compare your local `.env` file with `.env.example`; do not publish secret values when requesting help.
+- **Firebase errors:** Verify the project's Firebase configuration, enabled services, access rules, and required environment variables.
+- **Build or type errors:** Check the error output and confirm the installed dependencies match the lockfile.
+
+## License
+
+No license has been confirmed from the repository screenshot. Add a `LICENSE` file and update this section with the selected license before inviting others to reuse or distribute the project.
+
+## Maintainer
+
+**GitHub:** [@shakirshar610-tech](https://github.com/shakirshar610-tech)
+
+---
+
+*JARVIS is an evolving project. Refer to the source code and `package.json` for the current implementation and supported commands.*
